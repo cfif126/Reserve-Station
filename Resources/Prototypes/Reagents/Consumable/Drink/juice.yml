@@ -282,7 +282,7 @@
   name: reagent-name-juice-pineapple
   parent: BaseJuice
   desc: reagent-desc-juice-pineapple
-physicalDesc: reagent-physical-desc-tropical
+  physicalDesc: reagent-physical-desc-tropical
   flavor: pineapple
   color: yellow
   metabolisms: #Goobstation start
@@ -360,7 +360,7 @@ physicalDesc: reagent-physical-desc-tropical
   desc: reagent-desc-juice-cherry
   physicalDesc: reagent-physical-desc-sweet
   flavor: cherry
-color: "#84031a"
+  color: "#84031a"
   # Reserve: Orchid's Barmania - Visual Fixes start
   metamorphicSprite:
     sprite: _Reserve/Objects/Consumable/Drinks/cherry.rsi
