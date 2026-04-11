@@ -166,11 +166,16 @@
       - !type:SatiateThirst
         factor: 2
       - !type:AdjustReagent
-        reagent: Oculine
+reagent: Oculine
         amount: 0.5
       - !type:AdjustReagent
         reagent: Nutriment
         amount: 0.5
+      - !type:ImmunityModifier #Goobstation start
+        gainRateModifier: 0.0005 #1/3rd of immurin
+        strengthModifier: 0.01
+        statusLifetime: 3 # 3s per 1u #Goobstation end
+
   # Reserve: Orchid's Barmania - Visual Fixes start
   metamorphicSprite:
     sprite: _Reserve/Objects/Consumable/Drinks/carrot.rsi
@@ -211,6 +216,15 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  metabolisms: #Goobstation start
+    Medicine:
+      effects:
+      - !type:SatiateThirst
+      - !type:ImmunityModifier
+        gainRateModifier: 0.0005 #1/3rd of immurin
+        strengthModifier: 0.01
+        statusLifetime: 3 # 3s per 1u
+        #Goobstation end
 
 - type: reagent
   id: JuiceLime
@@ -218,8 +232,18 @@
   parent: BaseJuice
   desc: reagent-desc-juice-lime
   physicalDesc: reagent-physical-desc-citric
-  flavor: sour
+flavor: sour
   color: "#99bb43"
+  metabolisms: #Goobstation start
+    Medicine:
+      effects:
+      - !type:SatiateThirst
+      - !type:ImmunityModifier
+        gainRateModifier: 0.0005 #1/3rd of immurin
+        strengthModifier: 0.01
+        statusLifetime: 3 # 3s per 1u
+        #Goobstation end
+
   # Reserve: Orchid's Barmania - Visual Fixes start
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/glass_green.rsi
@@ -243,15 +267,34 @@
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
+  metabolisms: #Goobstation start
+    Medicine:
+      effects:
+      - !type:SatiateThirst
+      - !type:ImmunityModifier
+        gainRateModifier: 0.0005 #1/3rd of immurin
+        strengthModifier: 0.01
+        statusLifetime: 3 # 3s per 1u
+        #Goobstation end
 
 - type: reagent
   id: JuicePineapple
   name: reagent-name-juice-pineapple
   parent: BaseJuice
   desc: reagent-desc-juice-pineapple
-  physicalDesc: reagent-physical-desc-tropical
+physicalDesc: reagent-physical-desc-tropical
   flavor: pineapple
   color: yellow
+  metabolisms: #Goobstation start
+    Medicine:
+      effects:
+      - !type:SatiateThirst
+      - !type:ImmunityModifier
+        gainRateModifier: 0.0005 #1/3rd of immurin
+        strengthModifier: 0.01
+        statusLifetime: 3 # 3s per 1u
+        #Goobstation end
+
   # Reserve: Orchid's Barmania - Visual Fixes start
   metamorphicSprite:
     sprite: _Reserve/Objects/Consumable/Drinks/pineapple.rsi
@@ -317,7 +360,7 @@
   desc: reagent-desc-juice-cherry
   physicalDesc: reagent-physical-desc-sweet
   flavor: cherry
-  color: "#84031a"
+color: "#84031a"
   # Reserve: Orchid's Barmania - Visual Fixes start
   metamorphicSprite:
     sprite: _Reserve/Objects/Consumable/Drinks/cherry.rsi
