@@ -361,6 +361,7 @@
     chaosScore: 60
   - type: RandomEntityStorageSpawnRule
     prototype: MobSkeletonCloset
+  - type: GhostPingRule # Reserve
 
 - type: entity
   parent: BaseGameRule
@@ -401,6 +402,7 @@
       pickPlayer: false
       mindRoles:
       - MindRoleDragon
+  - type: GhostPingRule # Harmony change
 
 - type: entity
   parent: BaseGameRule
@@ -472,6 +474,7 @@
         nameFormat: name-format-ninja
       mindRoles:
       - MindRoleNinja
+  - type: GhostPingRule # Harmony change
 
 - type: entity
   parent: BaseGameRule
@@ -495,7 +498,6 @@
       components:
       - BorgBrain # No copying the AI or borgs.
       - AntagImmune # No copying people who are immune to antags. (Gemini Hologram, Ghost bar, etcetera.)
-
   - type: AntagObjectives
     objectives:
     - ParadoxCloneKillObjective
@@ -518,6 +520,7 @@
         sound: /Audio/Misc/paradox_clone_greeting.ogg
       mindRoles:
       - MindRoleParadoxClone
+  - type: GhostPingRule # Reserve
 
 #- type: entity   Goobstaion start - disabled until rework
 #  parent: BaseGameRule
@@ -579,6 +582,7 @@
 #        - NamesWizardLast
 #      mindRoles:
 #      - MindRoleWizard
+#  - type: GhostPingRule # Harmony change
 
 # disabled until event is rewritten to be more interesting
 #- type: entity
@@ -889,6 +893,7 @@
   - type: AntagLoadProfileRule # Goobstation
     speciesOverride: Human
     alwaysUseSpeciesOverride: true
+  - type: GhostPingRule # Harmony change
 
 - type: entity
   parent: BaseTraitorRule
@@ -1051,3 +1056,4 @@
       min: 1
       max: 1
       pickPlayer: false
+  - type: GhostPingRule # Reserve
