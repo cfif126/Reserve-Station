@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Space Station 14 Contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   parent: BaseGameRule
   id: BloodBrothers
@@ -28,3 +32,22 @@
       - type: InitialBloodBrother
       mindRoles:
       - MindRoleBloodBrother
+
+# Reserve edit start: SecretPlus Blood Brothers
+- type: entity
+  parent: BloodBrothers
+  id: BloodBrothersSpawn
+  components:
+  - type: StationEvent
+    earliestStart: 15
+    reoccurrenceDelay: 45
+    weight: 3
+    minimumPlayers: 10
+    duration: null
+    chaos:
+      Hostile: 75
+    eventType: HostilesSpawn
+  - type: GameRule
+    chaosScore: 100
+  - type: GhostPingRule # Reserve
+# Reserve edit end: SecretPlus Blood Brothers
